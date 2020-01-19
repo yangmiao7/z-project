@@ -1,0 +1,24 @@
+@import "variable";
+
+.layout-header {
+    display: flex;
+    align-items: center;
+    height: @navHeight;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0,21,41,.08);
+
+    &.fixed {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+}
+
+.header-trigger {
+    height: @navHeight;
+    line-height: @navHeight;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
