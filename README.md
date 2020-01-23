@@ -47,3 +47,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 - [ ] 响应式布局
 - [ ] axios 请求封装
 
+### 工具&规范
+- [x] TSLint
+- [ ] StyleLint
+
