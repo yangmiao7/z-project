@@ -4,13 +4,13 @@ import BasicLayout from "./layouts/BasicLayout";
 import {HashRouter} from "react-router-dom";
 
 const App: React.FC = () => {
-    return (
-        <div>
-            <HashRouter>
-                <BasicLayout/>
-            </HashRouter>
-        </div>
-    );
+  return (
+    <div>
+      <HashRouter>
+        <BasicLayout/>
+      </HashRouter>
+    </div>
+  );
 }
 
 export default App;
