@@ -50,4 +50,5 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 ### 工具&规范
 - [x] TSLint
 - [ ] StyleLint
+- [ ] Husky
 
