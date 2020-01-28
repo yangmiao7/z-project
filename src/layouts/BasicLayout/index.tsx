@@ -1,4 +1,4 @@
-import React, {FunctionComponent} from "react";
+import React, {FunctionComponent, Dispatch, createContext, useState} from "react";
 import './index.less'
 import {
   Route,
@@ -9,10 +9,10 @@ import {
 // import {Row, Col, Menu, Icon, Button} from 'antd'
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
-
+import Home from '../../pages/Home'
+import {LayoutContextProvider} from "./LayoutContext";
 // import SystemEmployee from '../../pages/SystemEmployee'
 // import SystemOrganization from '../../pages/SystemOrganization'
-import Home from '../../pages/Home'
 
 // const routes = [
 //   {
@@ -38,22 +38,27 @@ import Home from '../../pages/Home'
 // ]
 
 const Layout: FunctionComponent = () => {
-  function handleCollapse(collapsed: boolean): void {
-    console.log(collapsed)
+  const [collapsed, setCollapsed] = useState(true)
+
+  const changeCollapsed = (): void => {
+    debugger
+    setCollapsed(!collapsed)
   }
 
   return (
-    <section className='layout'>
-      <Sidebar collapsed={false}/>
+    <LayoutContextProvider value={{collapsed, dispatchCollapsed: changeCollapsed }}>
+      <section className='layout'>
+        <Sidebar collapsed={false}/>
 
-      <div className='layout-content'>
-        <Navbar onCollapse={handleCollapse}/>
+        <div className='layout-content'>
+          <Navbar onCollapse={setCollapsed}/>
 
-        <Switch>
-          <Route path="/home" component={Home}/>
-        </Switch>
-      </div>
-    </section>
+          <Switch>
+            <Route path="/home" component={Home}/>
+          </Switch>
+        </div>
+      </section>
+    </LayoutContextProvider>
   )
 }
 
