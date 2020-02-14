@@ -52,16 +52,29 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint"
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "devDependencies": {
     "babel-plugin-import": "^1.13.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-config-standard-jsx": "^8.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.18.3",
     "eslint-plugin-react-hooks": "^2.3.0",
-    "eslint-plugin-react": "^7.18.0",
+    "eslint-plugin-standard": "^4.0.1",
     "husky": "^4.2.0",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
+    "lint-staged": "^10.0.7",
     "react-app-rewired": "^2.1.5"
   }
 }
