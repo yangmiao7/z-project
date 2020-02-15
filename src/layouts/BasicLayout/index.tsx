@@ -10,8 +10,8 @@ import Sidebar from './Sidebar'
 import Navbar from './Navbar'
 import Home from '../../pages/Home'
 import { LayoutContextProvider } from './LayoutContext'
-// import SystemEmployee from '../../pages/SystemEmployee'
-// import SystemOrganization from '../../pages/SystemOrganization'
+import SystemEmployee from '../../pages/SystemEmployee'
+import SystemOrganizational from '../../pages/SystemOrganizational'
 
 const Layout: FunctionComponent = () => {
   const [collapsed, setCollapsed] = useState(true)
@@ -33,6 +33,10 @@ const Layout: FunctionComponent = () => {
               <Route path='/' exact render={() => <Redirect to='/home' />} />
 
               <Route path='/home' component={Home} />
+
+              {/* 系统管理页面 */}
+              <Route path='/system/organizational' component={SystemOrganizational} />
+              <Route path='/system/employee' component={SystemEmployee} />
             </Switch>
           </div>
         </section>
