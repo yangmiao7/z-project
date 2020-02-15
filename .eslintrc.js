@@ -8,8 +8,8 @@ module.exports = {
   ],//定义文件继承的子规范
   plugins: ['@typescript-eslint', 'react-hooks'],//定义了该eslint文件所依赖的插件
   env:{                          //指定代码的运行环境
-    browser: true,
     node: true,
+    browser: true,
   },
   rules: {
     indent: ['error', 2],
@@ -18,6 +18,7 @@ module.exports = {
       'avoidEscape': true,
       'allowTemplateLiterals': true
     }],
+    '@typescript-eslint/no-var-requires': 0,
     "react-hooks/rules-of-hooks": "error", // 检查 Hook 的规则
     "react-hooks/exhaustive-deps": "warn" // 检查 effect 的依赖
   },
