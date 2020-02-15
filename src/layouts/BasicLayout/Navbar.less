@@ -3,22 +3,44 @@
 .layout-header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 @contentPadding;
     height: @navHeight;
     background: #fff;
-    box-shadow: 0 1px 4px rgba(0,21,41,.08);
+    box-shadow: 0 1px 4px rgba(0, 21, 41, .08);
 
     &.fixed {
         position: fixed;
         top: 0;
-        width: 100%;
+        width: calc(100% - @sidebarWidth);
     }
 }
 
 .header-trigger {
     height: @navHeight;
     line-height: @navHeight;
+    padding: 0;
     background: transparent;
     border: none;
     outline: none;
     cursor: pointer;
+}
+
+.user-action {
+    height: 100%;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.user-info {
+    height: @navHeight;
+    line-height: @navHeight;
+
+    &:hover {
+        background: rgba(0, 0, 0, .025);
+    }
+
+    .ant-avatar {
+        margin-right: 10px;
+    }
 }

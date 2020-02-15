@@ -1,10 +1,16 @@
 @import "variable";
-.layout {
+.basic-layout {
     display: flex;
+    min-height: 100vh;
+}
 
-    .layout-content {
-        position: relative;
-        flex: 1;
-        padding: @navHeight 0 0 @sidebarWidth;
-    }
+.layout {
+    position: relative;
+    flex: auto;
+    padding: @navHeight 0 0 @sidebarWidth;
+    background: #eff0f4;
+}
+
+.layout-content {
+    padding: @contentPadding;
 }
