@@ -12,6 +12,7 @@ import Home from '../../pages/Home'
 import { LayoutContextProvider } from './LayoutContext'
 import SystemEmployee from '../../pages/SystemEmployee'
 import SystemOrganizational from '../../pages/SystemOrganizational'
+import SystemFunctionality from '../../pages/SystemFunctionality'
 
 const Layout: FunctionComponent = () => {
   const [collapsed, setCollapsed] = useState(true)
@@ -37,6 +38,7 @@ const Layout: FunctionComponent = () => {
               {/* 系统管理页面 */}
               <Route path='/system/organizational' component={SystemOrganizational} />
               <Route path='/system/employee' component={SystemEmployee} />
+              <Route path='/system/functionality' component={SystemFunctionality} />
             </Switch>
           </div>
         </section>
